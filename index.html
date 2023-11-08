@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Major Assignment 3</title>
+    <script src="libs/d3.js"></script>
+    <script src="libs/network.js"></script>
+</head>
+<body>
+    <script>
+        // Import the data, make the svg, and call the function to make the network
+        d3.json("data/publication_network.json").then(function (data){
+            let svg = d3.select('body').append("svg").attr("viewBox", "0 0 2500 2500")
+            console.log(data)
+            simulate(data, svg)
+        })
+    </script>
+</body>
+</html>
